@@ -1,9 +1,21 @@
 ---
 layout: home
-title: 
-date: 2020-11-20 
+title:
 ---
-### Hi, I'm Dumbarton 👋
-Dumbarton is a Jekyll Theme developed by [Tyler Butler](https://github.com/tcbutler320). The theme is designed for academics and features a simple home page with an about me section and an interactive highlights section to describe publications, coursework, courses taught, and projects. You can checkout the project on [Github](https://github.com/tcbutler320/Jekyll-Theme-Dumbarton), feel free to make contributions and feature requests and don't forget to give it a star.
+
+### Hi, I'm Muhammad Habibullah Galih Tri Aji
+
+I am a PhD researcher working in the fields of marine geochemistry, marine geology, and paleoceanography. My research focuses on understanding the interactions between tectonics, chemical weathering, and the global carbon cycle, and how these processes have influenced Earth's climate throughout geological history.
+
+My current interests:
+
+- Continental chemical weathering
+- Carbon cycle dynamics
+- Marine sediment geochemistry
+- Tectonic-climate interactions
+- Paleoceanography
+- Earth system evolution
+
+Through geochemical and geological approaches, I aim to better understand the mechanisms that regulate atmospheric CO₂ and long-term climate change across different timescales.
 
 <a href="/contact.html" class="highlighted">Contact Me</a>
