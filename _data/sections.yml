@@ -1,13 +1,13 @@
-- name: Publications
-  id: publications
+- name: Education
+  id: education
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   url: publications.html
   first: true
   
-- name: Education
-  id: courses
+- name: Publications
+  id: publications
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  content: 
+  url: publications.html
   first: false
 
 - name: Teaching
