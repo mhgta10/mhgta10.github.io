@@ -3,6 +3,7 @@
   School: School of Ocean and Earth Science
   University: Tongji University
   year: 2025–Present
+  logo: /assets/img/tongji.png
   description: >
     Research focuses on marine geochemistry, weathering, and long-term carbon cycling. 
 - Degree: Master
@@ -10,6 +11,7 @@
   School: School of Sustainability Studies
   University: University of Toyama
   year: 2023–2025
+  logo: /assets/img/toyama.png
   description: >
     Specialized in chemical oceanography, sustainability science, environmental systems, and ocean sustainability. 
 - Degree: Bachelor
@@ -17,5 +19,6 @@
   School: Faculty of Mathematics and Natural Science
   University: Universitas Jenderal Soedirman
   year: 2018–2022
+  logo: /assets/img/unsoed.png
   description: >
    Focused on inorganic chemistry, environmental chemistry, and material chemistry.
