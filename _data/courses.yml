@@ -1,17 +1,26 @@
-- Course: POL 554 International Security Studies
-  Program: School of Public and International Affairs  
-  School: Harvard
-  id: POL554
+- Degree: PhD
+  Program: Marine Science  
+  School: School of Ocean and Earth Science
+  University: Tongji University
   description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
   link: https://example.com
 
-- Course: POL 585 International Political Economy
-  Program: School of Public and International Affairs
-  School: Harvard
-  id: POL585
+- Degree: Master
+  Program: Sustainability Science  
+  School: School of Sustainability Studies
+  University: University of Toyama
   description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  link: https://example.com
+
+- Degree: Bachelor
+  Program: Chemistry  
+  School: Faculty of Mathematics and Natural Science
+  University: Universitas Jenderal Soedirman
+  description: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
   link: https://example.com
