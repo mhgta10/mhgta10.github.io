@@ -1,79 +1,48 @@
----
-layout: default
----
-{% assign theme = site.data.themes[site.ui_theme] %}
+<div class="tab-content mt-3">
 
-<!--  HELP TIPS SECTION  -->
-<!-- used only for develop mode, disable these in _config.yml with `help_tips: false` -->
-{% if site.help_tips %}
-<div class="toast animate__animated animate__pulse animate__infinite" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" data-delay="10000" style="position: absolute; top: 10px; right: 10px;z-index: 10000;">
-  <div class="toast-header">
-    <img src="/assets/img/icons/favicon-16x16.png" class="rounded mr-2" alt="...">
-    <strong class="mr-auto">Tyler Butler</strong>
-    <small class="text-muted">11 mins ago</small>
-    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="toast-body">
-    Thanks for checking out Jekyll-Theme-Dumbarton ! This theme was developed by <a href="https://twitter.com/tbutler0x90">Tyler Butler</a>. If you're interested in using this in your own website, checkout the project on <a href="https://github.com/tcbutler320/Jekyll-Theme-Dumbarton">Github</a>
-  </div>
-</div>
-{% endif %}
+{% for section in site.data.sections %}
 
-<!-- ABOUT ME SECTION -->
-<div class="card mx-auto border-0" style="position:relative;background-color:{{theme.home-background-color}};">
-  <div class="row">
-    <div class="col-md-4">
-      {% if site.animate %}
-        <img src="{{ site.profile_image }}" class="img-thumbnail float-left animate__animated animate__fadeInLeft shadow bg-white rounded" alt="...">
-      {% else %}
-        <img src="{{ site.profile_image }}" class="img-thumbnail float-left" alt="...">
+  <!-- EDUCATION -->
+  {% if section.name == "Education" %}
+  <div class="tab-pane {% if section.first %}active{% endif %} overflow-auto"
+       id="{{section.id}}" role="tabpanel">
+
+    <p><i>{{section.description}}</i></p>
+
+    {% for edu in site.data.courses %}
+    <div class="media mt-3 mb-3">
+
+      {% if edu.logo %}
+      <img src="{{ edu.logo }}"
+           class="mr-3"
+           alt="{{ edu.University }}"
+           style="width:70px;height:70px;object-fit:contain;">
       {% endif %}
-    </div>
-    <!-- EDUCATION SECTION -->
-    <div class="col-md-8">
-      {% if site.animate %}
-      <div class="card-body animate__animated animate__fadeInRight" style="color:{{theme.education-font-color}};">
-      {% else %}
-      <div class="card-body mt-0" style="color:{{theme.education-font-color}};">
-      {% endif %}
-        <p style="color:{{theme.education-font-color}};">{{ content | markdownify}}<p>
-        {% if site.home_option == "education" %}
-          {% include education.html %}
+
+      <div class="media-body">
+        <strong>{{ edu.Degree }} in {{ edu.Program }}</strong><br>
+        {{ edu.University }}<br>
+        <em>{{ edu.School }}</em>
+
+        {% if edu.description %}
+        <p class="mt-1 mb-0">
+          {{ edu.description }}
+        </p>
         {% endif %}
       </div>
+
     </div>
-  </div>
-</div>
 
-<!-- style="font-family:{{ theme.link-font }};background-color:{{ theme.nav-color }}; -->
+    {% unless forloop.last %}
+    <hr>
+    {% endunless %}
 
-<!-- HOME HIGHLIGHTS SECTION --> 
-{% if site.animate %}
-<div class="card mx-auto animate__animated animate__slideInUp animate__delay-1s glowing-border" style="max-width: 100%;">
-{% else %}
-<div class="card mx-auto mb-1 border-0"  style="max-width: 100%;">
-{% endif %}
-  <div class="card-header" style="background-color:{{ theme.home-highlight-background }};">
-    <ul class="nav nav-tabs card-header-tabs" id="test-list" role="tablist">
-      {% for section in site.data.sections %}
-        {% if section.first %}
-          <li class="nav-item">
-            <a class="nav-link shadow-none" id="{{ section.jsid }}" href="#{{section.id}}" role="tab" aria-controls="{{section.id}}" aria-selected="true" style="font-family:{{ theme.font}};color:{{ theme.home-highlight-header-text}};">{{section.emoji}} {{section.name}}</a>
-          </li>
-        {% else %}
-          <li class="nav-item">
-              <a class="nav-link" id="{{ section.jsid }}" href="#{{section.id}}" role="tab" aria-controls="{{section.id}}" aria-selected="true" style="font-family:{{ theme.font}};color:{{ theme.home-highlight-header-text}};">{{section.emoji}} {{section.name}}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+    {% endfor %}
+
   </div>
-  <div class="card-body">          
-      <div class="tab-content mt-3">
-        {% for section in site.data.sections %}
-          {% if section.name == "Publications" %}
+
+  <!-- PUBLICATIONS -->
+  {% elsif section.name == "Publications" %}
   <div class="tab-pane {% if section.first %}active{% endif %} overflow-auto"
        id="{{section.id}}" role="tabpanel">
 
@@ -91,32 +60,36 @@ layout: default
 
   </div>
 
-{% elsif section.name == "Education" %}
-  <div class="tab-pane {% if section.first %}active{% endif %} overflow-auto"
-       id="{{section.id}}" role="tabpanel">
+  <!-- AWARDS -->
+  {% elsif section.name == "Awards" %}
+  <div class="tab-pane overflow-auto"
+       id="{{section.id}}"
+       role="tabpanel">
 
     <p><i>{{section.description}}</i></p>
 
-    {% for edu in site.data.courses %}
+    {% for award in site.data.awards %}
+
     <div class="media mt-3 mb-3">
 
-      <img src="{{ edu.logo }}"
+      {% if award.logo %}
+      <img src="{{ award.logo }}"
            class="mr-3"
-           alt="{{ edu.University }}"
-           style="width:70px; height:70px; object-fit:contain;">
+           alt="{{ award.organization }}"
+           style="width:70px;height:70px;object-fit:contain;">
+      {% endif %}
 
       <div class="media-body">
 
-        <strong>{{ edu.Degree }} in {{ edu.Program }}</strong><br>
+        <strong>{{ award.title }}</strong><br>
 
-        {{ edu.University }}<br>
+        {{ award.organization }}<br>
 
-        <em>{{ edu.School }}</em>
-        {% if edu.year %} ({{ edu.year }}){% endif %}
+        <em>{{ award.year }}</em>
 
-        {% if edu.description %}
-        <p class="mb-0 mt-1">
-          {{ edu.description }}
+        {% if award.description %}
+        <p class="mt-1 mb-0">
+          {{ award.description }}
         </p>
         {% endif %}
 
@@ -127,261 +100,125 @@ layout: default
     {% unless forloop.last %}
     <hr>
     {% endunless %}
+
     {% endfor %}
 
   </div>
 
-{% else %}
-        {% if section.name == "Presentations" %}
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
-                <p><i>{{section.description}}</i></p>
-                  <ul class="list-group list-group-flush">
-                  {% for pub in site.data.publications %}
-                    <li class="list-group-item">
-                      <strong>{{ pub.title }}</strong><br>
-                       {{ pub.authors }}<br>
-                        <em>{{ pub.journal }}</em> ({{ pub.year }})
-                      </li>
-                    {% endfor %}
-                   </ul>              
-              </div>
-            {% elsif section.name == "Awards" %}
+  <!-- PRESENTATIONS -->
+  {% elsif section.name == "Presentations" %}
+  <div class="tab-pane overflow-auto"
+       id="{{section.id}}"
+       role="tabpanel">
 
-<div class="tab-pane overflow-auto"
-     id="{{section.id}}"
-     role="tabpanel"
-     aria-labelledby="{{section.id}}-tab">
+    <p><i>{{section.description}}</i></p>
 
-  <p><i>{{section.description}}</i></p>
+    {% for pres in site.data.presentations %}
 
-  {% for award in site.data.awards %}
+    <div class="media mt-3 mb-3">
 
-  <div class="media mt-3 mb-3">
-
-    <img src="{{ award.logo }}"
-         class="mr-3"
-         alt="{{ award.organization }}"
-         style="width:70px; height:70px; object-fit:contain;">
-
-    <div class="media-body">
-
-      <strong>{{ award.title }}</strong><br>
-
-      {{ award.organization }}<br>
-
-      <em>{{ award.year }}</em>
-
-      {% if award.description %}
-      <p class="mb-0 mt-1">
-        {{ award.description }}
-      </p>
+      {% if pres.logo %}
+      <img src="{{ pres.logo }}"
+           class="mr-3"
+           alt="{{ pres.event }}"
+           style="width:70px;height:70px;object-fit:contain;">
       {% endif %}
 
-    </div>
+      <div class="media-body">
 
-  </div>
+        <strong>{{ pres.title }}</strong><br>
 
-  {% unless forloop.last %}
-  <hr>
-  {% endunless %}
+        {{ pres.event }}<br>
 
-  {% endfor %}
+        <em>{{ pres.location }}</em>
 
-</div>
-        {% elsif section.name == "Presentations" %}
+        {% if pres.year %}
+        ({{ pres.year }})
+        {% endif %}
 
-<div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel">
+        {% if pres.type %}
+        <p class="mt-1 mb-0">
+          {{ pres.type }}
+        </p>
+        {% endif %}
 
-  <p><i>{{section.description}}</i></p>
-
-  {% for pres in site.data.presentations %}
-
-  <div class="media mt-3 mb-3">
-
-    {% if pres.logo %}
-    <img src="{{ pres.logo }}"
-         class="mr-3"
-         alt="{{ pres.event }}"
-         style="width:70px; height:70px; object-fit:contain;">
-    {% endif %}
-
-    <div class="media-body">
-
-      <strong>{{ pres.title }}</strong><br>
-
-      {{ pres.event }}<br>
-
-      <em>{{ pres.location }}</em>
-      {% if pres.year %} ({{ pres.year }}){% endif %}
-
-      {% if pres.type %}
-      <p class="mb-0 mt-1">
-        {{ pres.type }}
-      </p>
-      {% endif %}
-
-    </div>
-
-  </div>
-
-  {% unless forloop.last %}
-  <hr>
-  {% endunless %}
-
-  {% endfor %}
-
-</div>
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
-                <p><i>{{section.description}}</i></p>
-                  {% for projects in site.data.projects %}
-                  <div class="media mt-2">
-                    <a href="{{ projects.link }}"><img src="{{ projects.image }}" class="mr-3 mb-2 img-thumbnail border-0" alt="..."></a>
-                    <div class="media-body">
-                      <h5 class="mt-0"><a href="{{ projects.link }}" class="highlighted">{{ projects.name }}</a></h5>
-                      {{ projects.description }}
-                      {% if projects.tech %}
-                        <h6><mark><u>Technologies</u></mark></h6>
-                        {% for tech in projects.tech %}
-                        <span class="badge badge-secondary mr-1" style="background-color:{{ theme.projects-color }};">{{ tech }}</span>
-                        {% endfor %}
-                      {% endif %}
-                    </div>
-                  </div>
-                  {% endfor %}
-                </div>        
-              </div>
-            {% elsif section.name == "Research Expeditions" %}
-
-<div class="tab-pane overflow-auto"
-     id="{{section.id}}"
-     role="tabpanel"
-     aria-labelledby="{{section.id}}-tab">
-
-  <p><i>{{section.description}}</i></p>
-
-  {% for expedition in site.data.expeditions %}
-
-  <div class="media mt-3 mb-3">
-
-    <div class="media-body">
-
-      <strong>{{ expedition.title }}</strong><br>
-
-      {{ expedition.vessel }}<br>
-
-      <em>{{ expedition.year }}</em>
-
-      <p class="mb-0 mt-1">
-        {{ expedition.description }}
-      </p>
-
-    </div>
-
-  </div>
-
-  {% unless forloop.last %}
-  <hr>
-  {% endunless %}
-
-  {% endfor %}
-
-</div>
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
-                <p><i>{{section.description}}</i></p>
-                    {% for courses in site.data.teaching %}
-                    <div class="list-group">
-                      <div class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                          <h5 class="mb-1">{{ courses.Schoool }}</h5>
-                          <p>{{ courses.Program }}</p>
-                          <small>{{ courses.StartDate }} - {{ courses.EndDate }}</small>
-                        </div>
-                        <p class="mb-1">{{ courses.description }}</p>
-                        <small>{{ courses.Department }}</small>
-                      </div>
-                    </div>
-                    {% endfor %}
-              </div>
-            {% elsif section.name == "Education" %}
-<div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel">
-
-  <p><i>{{section.description}}</i></p>
-
-  {% for edu in site.data.courses %}
-  <div class="media mt-3 mb-3">
-
-    <img src="{{ edu.logo }}"
-         class="mr-3"
-         alt="{{ edu.University }}"
-         style="width:70px; height:70px; object-fit:contain;">
-
-    <div class="media-body">
-
-      <strong>{{ edu.Degree }} in {{ edu.Program }}</strong><br>
-
-      {{ edu.University }}<br>
-
-      <em>{{ edu.School }}</em>
-      {% if edu.year %} ({{ edu.year }}){% endif %}
-
-      {% if edu.description %}
-      <p class="mb-0 mt-1">
-        {{ edu.description }}
-      </p>
-      {% endif %}
-
-    </div>
-  </div>
-
-  {% unless forloop.last %}
-  <hr>
-  {% endunless %}
-
-  {% endfor %}
-
-</div>         {% else %}
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
-                <h5 class="card-title text-center"><a href="/{{ section.url }}" class="highlighted">{{section.description}}</a></h5>
-                <p class="card-text">{{ section.content }} </p>              
-              </div>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
       </div>
+
+    </div>
+
+    {% unless forloop.last %}
+    <hr>
+    {% endunless %}
+
+    {% endfor %}
+
   </div>
+
+  <!-- RESEARCH EXPEDITIONS -->
+  {% elsif section.name == "Research Expeditions" %}
+  <div class="tab-pane overflow-auto"
+       id="{{section.id}}"
+       role="tabpanel">
+
+    <p><i>{{section.description}}</i></p>
+
+    {% for expedition in site.data.expeditions %}
+
+    <div class="media mt-3 mb-3">
+
+      {% if expedition.logo %}
+      <img src="{{ expedition.logo }}"
+           class="mr-3"
+           alt="{{ expedition.title }}"
+           style="width:70px;height:70px;object-fit:contain;">
+      {% endif %}
+
+      <div class="media-body">
+
+        <strong>{{ expedition.title }}</strong><br>
+
+        {{ expedition.vessel }}<br>
+
+        <em>{{ expedition.year }}</em>
+
+        {% if expedition.description %}
+        <p class="mt-1 mb-0">
+          {{ expedition.description }}
+        </p>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+    {% unless forloop.last %}
+    <hr>
+    {% endunless %}
+
+    {% endfor %}
+
+  </div>
+
+  <!-- DEFAULT -->
+  {% else %}
+  <div class="tab-pane {% if section.first %}active{% endif %} overflow-auto"
+       id="{{section.id}}"
+       role="tabpanel">
+
+    <h5 class="card-title text-center">
+      <a href="/{{ section.url }}" class="highlighted">
+        {{ section.description }}
+      </a>
+    </h5>
+
+    <p class="card-text">
+      {{ section.content }}
+    </p>
+
+  </div>
+
+  {% endif %}
+
+{% endfor %}
+
 </div>
-
-
-
-<!-- ANIMATE.JS ANIMATE LIBRARY
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
--->
-
-
-<!--JS FUNCTION FOR RECENT WORK SECTION -->
-<script>
-    $('#test-list a').on('click', function (e) {
-    e.preventDefault()
-    $(this).tab('show')
-    })
-</script> 
-
-<!-- OPTIONAL TOAST JS FUNCTION-->
-<script>
-    $(document).ready(function() {
-        $(".toast").toast("show");
-    });
-</script>
-
-
-<script>
-$('body').scrollspy({ target: '#list-example' })
-</script>
-
-<script>
-$('.collapse').collapse()
-</script>
-
-<script>
-$('.show').show()
-</script>
