@@ -188,6 +188,49 @@ layout: default
   {% endfor %}
 
 </div>
+        {% elsif section.name == "Presentations" %}
+
+<div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel">
+
+  <p><i>{{section.description}}</i></p>
+
+  {% for pres in site.data.presentations %}
+
+  <div class="media mt-3 mb-3">
+
+    {% if pres.logo %}
+    <img src="{{ pres.logo }}"
+         class="mr-3"
+         alt="{{ pres.event }}"
+         style="width:70px; height:70px; object-fit:contain;">
+    {% endif %}
+
+    <div class="media-body">
+
+      <strong>{{ pres.title }}</strong><br>
+
+      {{ pres.event }}<br>
+
+      <em>{{ pres.location }}</em>
+      {% if pres.year %} ({{ pres.year }}){% endif %}
+
+      {% if pres.type %}
+      <p class="mb-0 mt-1">
+        {{ pres.type }}
+      </p>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+  {% unless forloop.last %}
+  <hr>
+  {% endunless %}
+
+  {% endfor %}
+
+</div>
               <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
                 <p><i>{{section.description}}</i></p>
                   {% for projects in site.data.projects %}
