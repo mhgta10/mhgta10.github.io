@@ -131,7 +131,6 @@ layout: default
 
   </div>
 
-{% else %}
         
             {% elsif section.name == "Awards" %}
 
@@ -218,26 +217,8 @@ layout: default
 
   {% endfor %}
 
+
 </div>
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
-                <p><i>{{section.description}}</i></p>
-                  {% for projects in site.data.projects %}
-                  <div class="media mt-2">
-                    <a href="{{ projects.link }}"><img src="{{ projects.image }}" class="mr-3 mb-2 img-thumbnail border-0" alt="..."></a>
-                    <div class="media-body">
-                      <h5 class="mt-0"><a href="{{ projects.link }}" class="highlighted">{{ projects.name }}</a></h5>
-                      {{ projects.description }}
-                      {% if projects.tech %}
-                        <h6><mark><u>Technologies</u></mark></h6>
-                        {% for tech in projects.tech %}
-                        <span class="badge badge-secondary mr-1" style="background-color:{{ theme.projects-color }};">{{ tech }}</span>
-                        {% endfor %}
-                      {% endif %}
-                    </div>
-                  </div>
-                  {% endfor %}
-                </div>        
-              </div>
             {% elsif section.name == "Research Expeditions" %}
 
 <div class="tab-pane overflow-auto"
@@ -274,58 +255,8 @@ layout: default
   {% endfor %}
 
 </div>
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
-                <p><i>{{section.description}}</i></p>
-                    {% for courses in site.data.teaching %}
-                    <div class="list-group">
-                      <div class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                          <h5 class="mb-1">{{ courses.Schoool }}</h5>
-                          <p>{{ courses.Program }}</p>
-                          <small>{{ courses.StartDate }} - {{ courses.EndDate }}</small>
-                        </div>
-                        <p class="mb-1">{{ courses.description }}</p>
-                        <small>{{ courses.Department }}</small>
-                      </div>
-                    </div>
-                    {% endfor %}
-              </div>
-            {% elsif section.name == "Education" %}
-<div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel">
-
-  <p><i>{{section.description}}</i></p>
-
-  {% for edu in site.data.courses %}
-  <div class="media mt-3 mb-3">
-
-    <img src="{{ edu.logo }}"
-         class="mr-3"
-         alt="{{ edu.University }}"
-         style="width:70px; height:70px; object-fit:contain;">
-
-    <div class="media-body">
-
-      <strong>{{ edu.Degree }} in {{ edu.Program }}</strong><br>
-
-      {{ edu.University }}<br>
-
-      <em>{{ edu.School }}</em>
-      {% if edu.year %} ({{ edu.year }}){% endif %}
-
-      {% if edu.description %}
-      <p class="mb-0 mt-1">
-        {{ edu.description }}
-      </p>
-      {% endif %}
-
-    </div>
-  </div>
-
-  {% unless forloop.last %}
-  <hr>
-  {% endunless %}
-
-  {% endfor %}
+              
+            
 
 </div>         {% else %}
               <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
