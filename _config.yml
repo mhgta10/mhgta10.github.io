@@ -8,30 +8,30 @@
 # -----------BASE SETTINGS---------------#
 #========================================#
 
-title: Dumbarton 
-email: 
-description: a minimalistic jekyll theme for academics
+title: Muhammad Habibullah Galih tri Aji
+email: habib@tongji.edu.cn
+description: PhD Researcher in Marine Science which focused on Marine Geochemistry
 baseurl:                                       # the subpath of your site, e.g. /blog
-url: "https://dumbarton.netlify.app/"          # the base hostname & protocol for your site, e.g. http://example.com
-image: /assets/img/dumbarton.png               # used to generate site link preview
-image_alt: A minimalistic jekyll theme for academic    # image description
+url: "https://mhgta10.github.io"          # the base hostname & protocol for your site, e.g. http://example.com
+image: /assets/img/avatar/profile.jpg               # used to generate site link preview
+image_alt: Muhammad Habibullah Galih Tri Aji    # image description
 
 # =======================================#
 # -----------SITE SETTINGS---------------#
 #========================================#: 
-author: John Doe 
-profile_image: /assets/img/avatar/cropped.png #/assets/img/avatar/avatar.jpeg 
-occupation: 
-snippet:
-twitter: tbutler0x90
-github: tcbutler320
-linkedin: tyler-b-a700a1aa
+author: Muhammad Habibullah Galih Tri Aji 
+profile_image: /assets/img/avatar/profile.jpg #/assets/img/avatar/avatar.jpeg 
+occupation: PhD Researcher
+snippet: Research interests include continental chemical weathering, global carbon cycling, tectonic-climate interactions, marine geochemistry, paleoceanography, and Earth system evolution.
+twitter: 
+github: mhgta10
+linkedin: Muhammad Habibullah galih Tri Aji
 stackoverflow: '12935605'
-website: https://tbutler.org
+website: 
 codepen: 
 medium: 
-email: developer.tbutler@gmail.com
-keybase: tbutler320
+email: habib@tongji.edu.cn
+keybase: 
 pgp: 
 ctftime: 
 phonenumber: 
@@ -116,7 +116,7 @@ exclude:
 # -----JEKYLL SCHOLAR SETTINGS-----------#
 #========================================#
 scholar:
-  last_name: Dumbarton
+  last_name: Aji, MHGT
   style: apa
   locale: en
   source: /_bibliography/
