@@ -73,27 +73,66 @@ layout: default
   <div class="card-body">          
       <div class="tab-content mt-3">
         {% for section in site.data.sections %}
-          {% if section.first %}
-            {% if section.name == "Publications" %}
-              <div class="tab-pane active overflow-auto" id="{{section.id}}" role="tabpanel">
-                <p><i>{{section.description}}</i></p>
-                  <ul class="list-group list-group-flush">
-                  {% for pub in site.data.publications %}
-                    <li class="list-group-item">
-                      <strong>{{ pub.title }}</strong><br>
-                       {{ pub.authors }}<br>
-                        <em>{{ pub.journal }}</em> ({{ pub.year }})
-                      </li>
-                    {% endfor %}
-                   </ul>
-              </div>
-            {% else %}
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel">
-                <p class="card-text">{{section.description}}</p>
-              </div>
-            {% endif %}
-          {% else %}  
-            {% if section.name == "Presentations" %}
+          {% if section.name == "Publications" %}
+  <div class="tab-pane {% if section.first %}active{% endif %} overflow-auto"
+       id="{{section.id}}" role="tabpanel">
+
+    <p><i>{{section.description}}</i></p>
+
+    <ul class="list-group list-group-flush">
+    {% for pub in site.data.publications %}
+      <li class="list-group-item">
+        <strong>{{ pub.title }}</strong><br>
+        {{ pub.authors }}<br>
+        <em>{{ pub.journal }}</em> ({{ pub.year }})
+      </li>
+    {% endfor %}
+    </ul>
+
+  </div>
+
+{% elsif section.name == "Education" %}
+  <div class="tab-pane {% if section.first %}active{% endif %} overflow-auto"
+       id="{{section.id}}" role="tabpanel">
+
+    <p><i>{{section.description}}</i></p>
+
+    {% for edu in site.data.courses %}
+    <div class="media mt-3 mb-3">
+
+      <img src="{{ edu.logo }}"
+           class="mr-3"
+           alt="{{ edu.University }}"
+           style="width:70px; height:70px; object-fit:contain;">
+
+      <div class="media-body">
+
+        <strong>{{ edu.Degree }} in {{ edu.Program }}</strong><br>
+
+        {{ edu.University }}<br>
+
+        <em>{{ edu.School }}</em>
+        {% if edu.year %} ({{ edu.year }}){% endif %}
+
+        {% if edu.description %}
+        <p class="mb-0 mt-1">
+          {{ edu.description }}
+        </p>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+    {% unless forloop.last %}
+    <hr>
+    {% endunless %}
+    {% endfor %}
+
+  </div>
+
+{% else %}
+        {% if section.name == "Presentations" %}
               <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
                 <p><i>{{section.description}}</i></p>
                   <ul class="list-group list-group-flush">
