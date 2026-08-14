@@ -165,7 +165,42 @@ layout: default
                   {% endfor %}
                 </div>        
               </div>
-            {% elsif section.name == "Teaching" %}
+            {% elsif section.name == "Research Expeditions" %}
+
+<div class="tab-pane overflow-auto"
+     id="{{section.id}}"
+     role="tabpanel"
+     aria-labelledby="{{section.id}}-tab">
+
+  <p><i>{{section.description}}</i></p>
+
+  {% for expedition in site.data.expeditions %}
+
+  <div class="media mt-3 mb-3">
+
+    <div class="media-body">
+
+      <strong>{{ expedition.title }}</strong><br>
+
+      {{ expedition.vessel }}<br>
+
+      <em>{{ expedition.year }}</em>
+
+      <p class="mb-0 mt-1">
+        {{ expedition.description }}
+      </p>
+
+    </div>
+
+  </div>
+
+  {% unless forloop.last %}
+  <hr>
+  {% endunless %}
+
+  {% endfor %}
+
+</div>
               <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
                 <p><i>{{section.description}}</i></p>
                     {% for courses in site.data.teaching %}
