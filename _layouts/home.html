@@ -147,42 +147,29 @@ layout: default
 <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel">
 
   <p><i>{{section.description}}</i></p>
-  <hr>
 
-  {% for edu in site.data.courses %}
-  <div class="mb-4">
+  <ul class="list-group list-group-flush">
+    {% for edu in site.data.courses %}
+    <li class="list-group-item">
 
-    <h4 style="font-weight:700; margin-bottom:5px;">
-      {{ edu.Degree }} in {{ edu.Program }}
-    </h4>
+      <strong>{{ edu.Degree }} in {{ edu.Program }}</strong><br>
 
-    <div style="font-size:1.25rem; font-weight:600;">
-      {{ edu.University }}
-    </div>
+      {{ edu.University }}<br>
 
-    <div style="font-style:italic; color:#555;">
-      {{ edu.School }}
-    </div>
+      <em>{{ edu.School }}</em>
+      {% if edu.year %} ({{ edu.year }}){% endif %}
 
-    {% if edu.year %}
-    <div style="color:#777;">
-      {{ edu.year }}
-    </div>
-    {% endif %}
+      {% if edu.description %}
+      <p class="mb-0 mt-1">
+        {{ edu.description }}
+      </p>
+      {% endif %}
 
-    <p class="mt-2 mb-0">
-      {{ edu.description }}
-    </p>
+    </li>
+    {% endfor %}
+  </ul>
 
-  </div>
-
-  {% unless forloop.last %}
-  <hr>
-  {% endunless %}
-
-  {% endfor %}
-
-</div>            {% else %}
+</div>           {% else %}
               <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
                 <h5 class="card-title text-center"><a href="/{{ section.url }}" class="highlighted">{{section.description}}</a></h5>
                 <p class="card-text">{{ section.content }} </p>              
