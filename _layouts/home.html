@@ -146,23 +146,40 @@ layout: default
             {% elsif section.name == "Education" %}
 <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel">
 
+  <p><i>{{section.description}}</i></p>
+  <hr>
+
   {% for edu in site.data.courses %}
-  <div class="card mb-3 border-0">
-    <div class="card-body">
+  <div class="mb-4">
 
-      <h5 class="mb-1">
-        {{ edu.Degree }} in {{ edu.Program }}
-      </h5>
+    <h4 style="font-weight:700; margin-bottom:5px;">
+      {{ edu.Degree }} in {{ edu.Program }}
+    </h4>
 
-      <strong>{{ edu.University }}</strong><br>
-      {{ edu.School }}
-
-      <p class="mt-2">
-        {{ edu.description }}
-      </p>
-
+    <div style="font-size:1.25rem; font-weight:600;">
+      {{ edu.University }}
     </div>
+
+    <div style="font-style:italic; color:#555;">
+      {{ edu.School }}
+    </div>
+
+    {% if edu.year %}
+    <div style="color:#777;">
+      {{ edu.year }}
+    </div>
+    {% endif %}
+
+    <p class="mt-2 mb-0">
+      {{ edu.description }}
+    </p>
+
   </div>
+
+  {% unless forloop.last %}
+  <hr>
+  {% endunless %}
+
   {% endfor %}
 
 </div>            {% else %}
