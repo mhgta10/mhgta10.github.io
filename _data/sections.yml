@@ -24,3 +24,10 @@
   url: awards.html
   first: false
 
+- name: Presentations
+  id: presentations
+  description: Conference presentations, seminars, and academic talks.
+  content: 
+  url: presentations.html
+  first: false  
+
