@@ -17,10 +17,10 @@
   url: expeditions.html
   first: false
 
-- name: Projects
-  id: projects
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- name: Awards
+  id: awards
+  description: Academic awards, scholarships, honors, and recognitions.
   content: 
-  url: projects.html
+  url: awards.html
   first: false
 
