@@ -145,7 +145,49 @@ layout: default
                     {% endfor %}
                    </ul>              
               </div>
-            {% elsif section.name == "Projects" %}
+            {% elsif section.name == "Awards" %}
+
+<div class="tab-pane overflow-auto"
+     id="{{section.id}}"
+     role="tabpanel"
+     aria-labelledby="{{section.id}}-tab">
+
+  <p><i>{{section.description}}</i></p>
+
+  {% for award in site.data.awards %}
+
+  <div class="media mt-3 mb-3">
+
+    <img src="{{ award.logo }}"
+         class="mr-3"
+         alt="{{ award.organization }}"
+         style="width:70px; height:70px; object-fit:contain;">
+
+    <div class="media-body">
+
+      <strong>{{ award.title }}</strong><br>
+
+      {{ award.organization }}<br>
+
+      <em>{{ award.year }}</em>
+
+      {% if award.description %}
+      <p class="mb-0 mt-1">
+        {{ award.description }}
+      </p>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+  {% unless forloop.last %}
+  <hr>
+  {% endunless %}
+
+  {% endfor %}
+
+</div>
               <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
                 <p><i>{{section.description}}</i></p>
                   {% for projects in site.data.projects %}
