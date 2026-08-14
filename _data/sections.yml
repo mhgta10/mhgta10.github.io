@@ -10,11 +10,11 @@
   url: publications.html
   first: false
 
-- name: Teaching
-  id: teaching
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  content: 
-  url: teaching.html
+- name: Research Expeditions
+  id: expeditions
+  description: Oceanographic cruises, field campaigns, and marine research expeditions.
+  content:
+  url: expeditions.html
   first: false
 
 - name: Projects
