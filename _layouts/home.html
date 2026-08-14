@@ -132,19 +132,7 @@ layout: default
   </div>
 
 {% else %}
-        {% if section.name == "Presentations" %}
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
-                <p><i>{{section.description}}</i></p>
-                  <ul class="list-group list-group-flush">
-                  {% for pub in site.data.publications %}
-                    <li class="list-group-item">
-                      <strong>{{ pub.title }}</strong><br>
-                       {{ pub.authors }}<br>
-                        <em>{{ pub.journal }}</em> ({{ pub.year }})
-                      </li>
-                    {% endfor %}
-                   </ul>              
-              </div>
+        
             {% elsif section.name == "Awards" %}
 
 <div class="tab-pane overflow-auto"
