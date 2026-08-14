@@ -148,9 +148,15 @@ layout: default
 
   <p><i>{{section.description}}</i></p>
 
-  <ul class="list-group list-group-flush">
-    {% for edu in site.data.courses %}
-    <li class="list-group-item">
+  {% for edu in site.data.courses %}
+  <div class="media mt-3 mb-3">
+
+    <img src="{{ edu.logo }}"
+         class="mr-3"
+         alt="{{ edu.University }}"
+         style="width:70px; height:70px; object-fit:contain;">
+
+    <div class="media-body">
 
       <strong>{{ edu.Degree }} in {{ edu.Program }}</strong><br>
 
@@ -165,11 +171,16 @@ layout: default
       </p>
       {% endif %}
 
-    </li>
-    {% endfor %}
-  </ul>
+    </div>
+  </div>
 
-</div>           {% else %}
+  {% unless forloop.last %}
+  <hr>
+  {% endunless %}
+
+  {% endfor %}
+
+</div>         {% else %}
               <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
                 <h5 class="card-title text-center"><a href="/{{ section.url }}" class="highlighted">{{section.description}}</a></h5>
                 <p class="card-text">{{ section.content }} </p>              
