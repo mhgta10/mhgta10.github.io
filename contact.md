@@ -1,8 +1,38 @@
 ---
 layout: contact
-title: 
-date: 2020-11-20 
-pgp: true 
+title: Contact
+date: 2020-11-20
+pgp: false
 ---
 
-Feel free to reach out to me on <a href="https://twitter.com/tbutler0x90" class="highlighted">Twitter</a> , <a href="https://www.linkedin.com/in/tyler-b-a700a1aa/" class="highlighted">Linkedin</a> , or <a href="https://keybase.io/tbutler320" class="highlighted">Keybase</a>. You can also send me a message through the netlify form api below. If needed, you can use the button below to copy my public PGP key 
+I welcome opportunities for academic collaboration, research discussions, conference networking, and professional inquiries related to marine geochemistry, paleoceanography, carbon cycling, and Earth system science.
+
+### Contact Information
+
+**Muhammad Habibullah Galih Tri Aji**
+
+Graduate Student  
+Department of Earth and Planetary Sciences  
+The University of Tokyo
+
+**Email:** your-email@utokyo.ac.jp
+
+### Research Profiles
+
+- Google Scholar: [Add Link]
+- ORCID: [Add Link]
+- ResearchGate: [Add Link]
+- LinkedIn: [Add Link]
+
+### Research Interests
+
+- Marine Geochemistry
+- Paleoceanography
+- Carbon Cycle and Climate Evolution
+- Chemical Weathering
+- Stable and Radiogenic Isotope Geochemistry
+- Ocean Drilling and Sediment Geochemistry
+
+### Collaboration
+
+I am interested in collaborations involving geochemistry, paleoclimate reconstruction, weathering processes, and Earth system evolution.
