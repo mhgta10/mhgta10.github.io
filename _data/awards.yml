@@ -1,6 +1,27 @@
-- title: Chinese Government Scholarship
-  organization: Ministry of Education of China
+- title: Chinese Government Scholarship - Marine Scholarship of China
+  organization: Ministry of Natural Resource of China
   year: 2025
   logo: /assets/img/csc.png
   description: >
     Full scholarship awarded for doctoral studies in Marine Science.
+
+- title: Best Graduate
+  organization: University of Toyama
+  year: 2025
+  logo: /assets/img/best_graduate.png
+  description: >
+    Awarded Best Graduate out of a 16-student Master's Program in Global Sustainability Science for outstanding academic performance and research excellence in the field of Chemical Oceanography and Environmental Sustainability
+    
+- title: Best Presenter
+  organization: The 7th International Conference on Multidisciplinary Approaches for Sustainable Rural Development
+  year: 2024
+  logo: /assets/img/best_presenter.png
+  description: >
+    Selected as Best Presenter out of 503 participants at 7th International Conference on Multidisciplinary Approaches for Sustainable Rural Development for delivering a compelling and well-structured presentation
+
+- title: Best Poster Presentation
+  organization: "The Global Seminar: Role of Young Minds in Sustainability Science Issues"
+  year: 2024
+  logo: /assets/img/best_poster.png
+  description: >
+    Awarded Best Poster Presentation out of 30 students at the Global Seminar: Role of Young Minds in Sustainability Science Issues for effectively communicating complex research on sustainability science
