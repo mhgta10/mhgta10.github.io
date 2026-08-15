@@ -1,32 +1,27 @@
 - name: Education
   id: education
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   url: publications.html
   first: true
   
 - name: Publications
   id: publications
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   url: publications.html
   first: false
 
 - name: Research Expeditions
   id: expeditions
-  description: Oceanographic cruises, field campaigns, and marine research expeditions.
   content:
   url: expeditions.html
   first: false
 
 - name: Awards
   id: awards
-  description: Academic awards, scholarships, honors, and recognitions.
   content: 
   url: awards.html
   first: false
 
 - name: Presentations
   id: presentations
-  description: Conference presentations, seminars, and academic talks.
   content: 
   url: presentations.html
   first: false  
