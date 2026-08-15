@@ -22,8 +22,15 @@
     Hakuho Maru, collecting marine-related samples to study oceanography.
 
 - title: East China Sea Research Expedition
-  vessel: NS23-117 & NS24-137 (Nagasaki Maru)
-  year: 2023 & 2024
+  vessel: NS24-137 (Nagasaki Maru)
+  year: 2024
+  description: >
+    Conducted marine surveys and sampling in the East China Sea,
+    focusing on water mixing processes in marginal sea systems.
+
+- title: East China Sea Research Expedition
+  vessel: NS23-117 (Nagasaki Maru)
+  year: 2023
   description: >
     Conducted marine surveys and sampling in the East China Sea,
     focusing on water mixing processes in marginal sea systems.
