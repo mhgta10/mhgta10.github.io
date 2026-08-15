@@ -1,7 +1,7 @@
 abyss:
     name: abyss
     nav-color: "#123499"
-    nav-text: "#ffffff"
+    nav-text: "#B3EBF2"
     title-font: "Noto Sans JP"
     link-font: "#272343"
     link-color: "#123499"
@@ -12,7 +12,7 @@ abyss:
     footer-social-color: "Black"
     button-color: "black"
     home-highlight-background: "#123499"
-    home-highlight-header-text: "#ffffff"
+    home-highlight-header-text: "#B3EBF2"
     education-title-font: "Noto Sans JP"
     education-title-size: "18px"
     education-entry-font: "Noto Sans JP"
