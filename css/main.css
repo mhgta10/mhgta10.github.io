@@ -692,34 +692,3 @@ $font-family: Proxima, Helvetica, Arial, sans-serif;
   font-family: Proxima;
   margin: 5% 0 0 15%;
 }
-
-/* ==========================
-   Custom Text Stroke
-   ========================== */
-
-.navbar-brand h4 {
-    color: white !important;
-    text-shadow:
-        1px 1px 0 #123499,
-       -1px 1px 0 #123499,
-        1px -1px 0 #123499,
-       -1px -1px 0 #123499;
-}
-
-.navbar-nav .nav-link {
-    color: white !important;
-    text-shadow:
-        1px 1px 0 #123499,
-       -1px 1px 0 #123499,
-        1px -1px 0 #123499,
-       -1px -1px 0 #123499;
-}
-
-.nav-tabs .nav-link {
-    color: white !important;
-    text-shadow:
-        1px 1px 0 #123499,
-       -1px 1px 0 #123499,
-        1px -1px 0 #123499,
-       -1px -1px 0 #123499;
-}
