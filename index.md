@@ -3,7 +3,7 @@ layout: home
 title:
 ---
 
-### Hi, I'm Muhammad Habibullah Galih Tri Aji
+### Hi, I'm (Habib) Muhammad Habibullah Galih Tri Aji
 
 I am a PhD researcher based in Shanghai, China, with a passion for **marine geochemistry**, **marine geology**, and **paleoceanography**. My research focuses on understanding how **tectonic processes**, **chemical weathering**, and the **global carbon cycle** work together to shape Earth's climate over geologic timescales.
 
