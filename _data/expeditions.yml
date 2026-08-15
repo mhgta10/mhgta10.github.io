@@ -1,19 +1,36 @@
-- title: Western North Pacific Ocean Expedition
-  vessel: R/V Hakuho Maru
-  year: 2024
+- title: Malaysia Peninsula Research Expedition
+  vessel: -
+  year: 2026
   description: >
-    Participated in a multidisciplinary oceanographic expedition investigating
-    nutrient dynamics, rare earth elements, and physical-biogeochemical interactions.
+    Geological field expedition across the Malay Peninsula focused on
+    lithological characterization, tropical weathering processes, and their
+    implications for continental chemical weathering and carbon cycling.
 
-- title: South China Sea Research Cruise
-  vessel: R/V Xiangyanghong
+- title: Sumatra Island Research Expedition
+  vessel: -
   year: 2025
   description: >
-    Conducted seawater sampling and geochemical analyses to investigate carbon cycling
-    and ocean acidification processes.
+    Conducted geological field investigations in Sumatra, Indonesia,
+    examining tectonic evolution, lithological diversity, and weathering
+    processes in a tectonically active tropical environment.
 
-- title: Indonesian Coastal Survey
-  vessel: Research Vessel Baruna Jaya
-  year: 2022
+- title: Western North Pacific Ocean Research Expedition
+  vessel: KH-25-1 (Hakuho Maru)
+  year: 2025
   description: >
-    Collected marine environmental data and sediment samples for coastal ecosystem studies.
+    Participated in an international oceanographic expedition aboard R/V
+    Hakuho Maru, collecting marine-related samples to study oceanography.
+
+- title: East China Sea Research Expedition
+  vessel: NS23-117 & NS24-137 (Nagasaki Maru)
+  year: 2023 & 2024
+  description: >
+    Conducted marine surveys and sampling in the East China Sea,
+    focusing on water mixing processes in marginal sea systems.
+
+- title: Toyama Bay Research Expedition
+  vessel: NS23-111 (Nagasaki Maru)
+  year: 2023
+  description: >
+    Participated in coastal and marine field surveys in Toyama Bay, Japan,
+    involving oceanographic observations, and environmental monitoring activities.
